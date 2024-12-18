@@ -1,0 +1,21 @@
+<h1 style="text-align: center">Ejemplo de Formularios Reactivos</h1>
+
+<!-- Usar un contenedor flex para centrar y separar los botones -->
+<div class="button-container">
+  <a
+    [routerLink]="['/formulario-Dinamico']"
+    routerLinkActive="router-link-active"
+  >
+    <button mat-raised-button color="accent">Formulario Dinámico</button>
+  </a>
+
+  <a [routerLink]="['/perfil-Usuario']" routerLinkActive="router-link-active">
+    <button mat-raised-button color="accent">Perfil usuario</button>
+  </a>
+
+  <a [routerLink]="['/perfil2fb']" routerLinkActive="router-link-active">
+    <button mat-raised-button color="accent">Perfil2fb</button>
+  </a>
+</div>
+<mat-divider></mat-divider>
+<router-outlet></router-outlet>

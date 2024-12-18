@@ -1,0 +1,64 @@
+.formulario
+ {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  width: 50%;
+  margin: 20px;
+  padding: 10px;
+  border: 1px solid black;
+  padding: 20px;
+  background-color: #f9f9f9;
+  border-radius: 8px;
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+ }
+  
+  .form-title {
+    text-align: center;
+    margin-bottom: 20px;
+    font-size: 24px;
+    font-weight: bold;
+  }
+  
+  .full-width {
+    width: 100%;
+    margin-bottom: 16px;
+  }
+  
+  .half-width {
+    width: 48%;
+    margin-right: 4%;
+  }
+  
+  .address-fields {
+    display: flex;
+    justify-content: space-between;
+    gap: 16px;
+    margin-bottom: 16px;
+  }
+  
+  .alias-field {
+    margin-bottom: 16px;
+  }
+  
+  mat-form-field {
+    display: block;
+  }
+  
+  button {
+    margin-top: 20px;
+    display: block;
+    width: 100%;
+  }
+  
+  mat-error {
+    color: red;
+    font-size: 12px;
+  }
+  
+  h3 {
+    margin-top: 20px;
+    font-size: 20px;
+    font-weight: 600;
+  }
+  

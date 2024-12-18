@@ -1,0 +1,43 @@
+/* Contenedor principal del formulario */
+.formulario {
+  max-width: 600px;
+  margin: 0 auto; /* Centrado horizontal */
+  padding: 20px;
+  background-color: #f9f9f9;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.form-title {
+  text-align: center;
+  font-size: 24px;
+  font-weight: bold;
+  margin-bottom: 20px;
+}
+
+/* Aseguramos que los campos de formulario se ajusten al 100% del contenedor */
+.full-width {
+  width: 100%;
+  margin-bottom: 16px;
+}
+
+/* Los campos de dirección se organizarán en dos columnas */
+.half-width {
+  width: 48%;
+  margin-right: 4%;
+  margin-bottom: 16px;
+}
+
+/* Estilos para los botones */
+.button-container {
+  display: flex;
+  justify-content: space-between;
+  gap: 10px;
+  margin-top: 20px;
+}
+
+/* Los errores de los campos */
+mat-error {
+  color: red;
+  font-size: 12px;
+}

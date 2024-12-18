@@ -1,0 +1,11 @@
+.button-container {
+    display: flex;                /* Usamos flexbox para alinear los botones */
+    justify-content: center;      /* Centramos los botones horizontalmente */
+    align-items: center;          /* Centrar los botones verticalmente (si es necesario) */
+    gap: 20px;                    /* Espacio entre los botones */
+    margin-top: 20px;             /* Agrega margen superior si es necesario */
+  }
+  
+  button {
+    margin: 0 10px;               /* Agregar margen entre los botones si se requiere */
+  }

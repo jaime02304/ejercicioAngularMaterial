@@ -1,0 +1,72 @@
+<form [formGroup]="profileForm" class="formulario" (ngSubmit)="onSubmit()">
+  <h2 class="form-title">Formulario de Perfil</h2>
+
+  <!-- Nombre -->
+  <mat-form-field class="form-field">
+    <mat-label>Nombre</mat-label>
+    <input matInput id="nombre" formControlName="nombre" />
+    <mat-error *ngIf="profileForm.controls['nombre'].hasError('required')">
+      El nombre es obligatorio.
+    </mat-error>
+  </mat-form-field>
+
+  <!-- Apellidos -->
+  <mat-form-field class="form-field">
+    <mat-label>Apellidos</mat-label>
+    <input matInput id="apellidos" formControlName="apellidos" />
+  </mat-form-field>
+
+  <!-- Email -->
+  <mat-form-field class="form-field">
+    <mat-label>Email</mat-label>
+    <input matInput id="email" formControlName="email" />
+    <mat-error *ngIf="profileForm.controls['email'].hasError('required')">
+      El email es obligatorio.
+    </mat-error>
+    <mat-error *ngIf="profileForm.controls['email'].hasError('email')">
+      El correo debe tener formato de email.
+    </mat-error>
+  </mat-form-field>
+
+  <!-- Dirección -->
+  <div formGroupName="direccion" class="direccion-section">
+    <h3>Dirección</h3>
+
+    <mat-form-field class="form-field">
+      <mat-label>Calle</mat-label>
+      <input matInput id="calle" formControlName="calle" />
+    </mat-form-field>
+
+    <div class="half-width-fields">
+      <mat-form-field class="half-width">
+        <mat-label>Localidad</mat-label>
+        <input matInput id="localidad" formControlName="localidad" />
+      </mat-form-field>
+
+      <mat-form-field class="half-width">
+        <mat-label>Provincia</mat-label>
+        <input matInput id="provincia" formControlName="provincia" />
+      </mat-form-field>
+    </div>
+
+    <mat-form-field class="form-field">
+      <mat-label>Código Postal</mat-label>
+      <input matInput id="codPostal" formControlName="codPostal" />
+    </mat-form-field>
+  </div>
+
+  <!-- Botón Enviar -->
+  <div class="button-container">
+    <button
+      mat-raised-button
+      color="accent"
+      type="submit"
+      [disabled]="profileForm.invalid"
+    >
+      Enviar
+    </button>
+  </div>
+
+  <!-- Estado del formulario -->
+  <p class="form-status">{{ profileForm.status }}</p>
+</form>
